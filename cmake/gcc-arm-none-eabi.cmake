@@ -7,7 +7,6 @@
 # Target definition
 set(CMAKE_SYSTEM_NAME Generic)
 set(CMAKE_SYSTEM_PROCESSOR ARM)
-
 set(CMAKE_C_COMPILER_TARGET arm-none-eabi)
 set(CMAKE_CXX_COMPILER_TARGET arm-none-eabi)
 

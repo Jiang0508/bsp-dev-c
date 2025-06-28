@@ -13,6 +13,7 @@
 #include "stm32_timebase.hpp"
 #include "stm32_uart.hpp"
 #include "stm32_usb.hpp"
+#include "stm32_watchdog.hpp"
 #include "flash_map.hpp"
 #include "app_framework.hpp"
 #include "xrobot_main.hpp"
@@ -61,7 +62,7 @@ static uint8_t i2c3_buf[32];
 
 extern "C" void app_main(void) {
   /* User Code Begin 2 */
-  
+
   /* User Code End 2 */
   STM32TimerTimebase timebase(&htim2);
   PlatformInit(2, 2048);
@@ -87,20 +88,20 @@ extern "C" void app_main(void) {
   auto adc3_adc_channel_8 = adc3.GetChannel(0);
   UNUSED(adc3_adc_channel_8);
 
-  STM32PWM pwm_tim1_ch1(&htim1, TIM_CHANNEL_1);
-  STM32PWM pwm_tim1_ch2(&htim1, TIM_CHANNEL_2);
-  STM32PWM pwm_tim1_ch3(&htim1, TIM_CHANNEL_3);
-  STM32PWM pwm_tim1_ch4(&htim1, TIM_CHANNEL_4);
+  STM32PWM pwm_tim1_ch1(&htim1, TIM_CHANNEL_1, false);
+  STM32PWM pwm_tim1_ch2(&htim1, TIM_CHANNEL_2, false);
+  STM32PWM pwm_tim1_ch3(&htim1, TIM_CHANNEL_3, false);
+  STM32PWM pwm_tim1_ch4(&htim1, TIM_CHANNEL_4, false);
 
-  STM32PWM pwm_tim10_ch1(&htim10, TIM_CHANNEL_1);
+  STM32PWM pwm_tim10_ch1(&htim10, TIM_CHANNEL_1, false);
 
-  STM32PWM pwm_tim3_ch3(&htim3, TIM_CHANNEL_3);
+  STM32PWM pwm_tim3_ch3(&htim3, TIM_CHANNEL_3, false);
 
-  STM32PWM pwm_tim4_ch3(&htim4, TIM_CHANNEL_3);
+  STM32PWM pwm_tim4_ch3(&htim4, TIM_CHANNEL_3, false);
 
-  STM32PWM pwm_tim8_ch1(&htim8, TIM_CHANNEL_1);
-  STM32PWM pwm_tim8_ch2(&htim8, TIM_CHANNEL_2);
-  STM32PWM pwm_tim8_ch3(&htim8, TIM_CHANNEL_3);
+  STM32PWM pwm_tim8_ch1(&htim8, TIM_CHANNEL_1, false);
+  STM32PWM pwm_tim8_ch2(&htim8, TIM_CHANNEL_2, false);
+  STM32PWM pwm_tim8_ch3(&htim8, TIM_CHANNEL_3, false);
 
   STM32SPI spi1(&hspi1, spi1_rx_buf, spi1_tx_buf, 3);
 

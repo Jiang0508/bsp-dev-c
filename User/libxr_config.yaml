@@ -7,33 +7,41 @@ SPI:
     tx_buffer_size: 32
     rx_buffer_size: 32
     dma_enable_min_size: 3
+    dma_section: ''
 I2C:
   i2c1:
     buffer_size: 32
     dma_enable_min_size: 3
+    dma_section: ''
   i2c2:
     buffer_size: 32
     dma_enable_min_size: 3
+    dma_section: ''
   i2c3:
     buffer_size: 32
     dma_enable_min_size: 3
+    dma_section: ''
 USART:
   usart1:
     tx_buffer_size: 128
     rx_buffer_size: 128
     tx_queue_size: 5
+    dma_section: ''
   usart3:
     tx_buffer_size: 128
     rx_buffer_size: 128
     tx_queue_size: 5
+    dma_section: ''
   usart6:
     tx_buffer_size: 512
     rx_buffer_size: 512
     tx_queue_size: 15
+    dma_section: ''
 ADC:
   adc3:
     buffer_size: 128
     vref: 3.3
+    dma_section: ''
 CAN:
   CAN1:
     queue_size: 5
