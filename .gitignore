@@ -1,6 +1,5 @@
 CMakeFiles/**
 .history/**
-Modules/**
 User/xrobot_main.hpp
 .config.yaml
 CMakeCache.txt
