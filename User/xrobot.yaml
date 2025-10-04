@@ -42,6 +42,8 @@ modules:
   name: BuzzerAlarm
   constructor_args:
     alarm_freq: 5000
+    alarm_duty: 300
+    alarm_cycle: 300
 - id: cmd
   name: CMD
   constructor_args:
