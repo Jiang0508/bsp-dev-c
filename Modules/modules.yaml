@@ -13,3 +13,4 @@ modules:
   - qdu-future/Chassis
   - qdu-future/Gimbal
   - qdu-future/Launcher@master
+  - qdu-future/EventBinder
