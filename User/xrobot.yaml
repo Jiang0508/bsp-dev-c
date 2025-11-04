@@ -168,16 +168,6 @@ modules:
     gyro_topic_name: bmi088_gyro
   template_args:
     MotorType: RMMotorContainer
-- id: SharedTopic_0
-  name: SharedTopic
-  constructor_args:
-    uart_name: uart_ai
-    task_stack_depth: 2048
-    buffer_size: 256
-    topic_configs:
-    - topic1
-    - - topic2
-      - libxr_def_domain
 - id: SharedTopicClient_0
   name: SharedTopicClient
   constructor_args:
@@ -217,4 +207,12 @@ modules:
     default_bullet_speed: 0.0
     min_launch_delay: 0.0
   template_args:
+    MotorType: RMMotorContainer
+- id: EventBinder_0
+  name: EventBinder
+  constructor_args:
+    dr16: '@dr16'
+    chassis: '@Omni_chassis'
+  template_args:
+    ChassisType: Omni<RMMotorContainer>
     MotorType: RMMotorContainer
