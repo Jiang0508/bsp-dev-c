@@ -9,7 +9,7 @@ modules:
   - qdu-future/BMI088
   - qdu-future/CMD
   - qdu-future/DR16
-  - qdu-future/Motor
+  - qdu-future/RMMotor
   - qdu-future/Chassis
   - qdu-future/Gimbal
   - qdu-future/Launcher@master
