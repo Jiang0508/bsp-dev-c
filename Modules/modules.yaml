@@ -15,3 +15,4 @@ modules:
   - qdu-future/Launcher
   - qdu-future/Launcher@master
   - qdu-future/EventBinder@master
+  - qdu-future/HostData@master
