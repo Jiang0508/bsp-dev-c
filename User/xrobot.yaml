@@ -120,6 +120,7 @@ modules:
       cycle: true
     motor_pitch: '@&motor_pit'
     motor_yaw: '@&motor_yaw'
+    cmd: '@&cmd'
     gimbal_param:
       I_pitch: 0.0
       I_yaw: 0.0
