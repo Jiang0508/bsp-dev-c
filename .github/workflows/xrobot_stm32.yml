@@ -22,9 +22,40 @@ jobs:
       run: pip install libxr xrobot
     - name: config libxr
       run: xr_cubemx_cfg -d ./ --xrobot
+
     - name: xrobot generate code
       run: xrobot_setup
     - name: config cmake
       run: export GCC_TOOLCHAIN_ROOT=/opt/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin && export CLANG_GCC_CMSIS_COMPILER=/opt/st-arm-clang && cmake . -DCMAKE_TOOLCHAIN_FILE:STRING=cmake/starm-clang.cmake -DCMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE -Bbuild -G Ninja
     - name: build
+      run: cmake --build build
+
+    - name: generate aerial code
+      run: xrobot_gen_main --config User/RobotConfig/aerial.yaml
+    - name: build aerial
+      run: cmake --build build
+
+    - name: generate dart code
+      run: xrobot_gen_main --config User/RobotConfig/dart.yaml
+    - name: build dart
+      run: cmake --build build
+
+    - name: generate helm_infantry code
+      run: xrobot_gen_main --config User/RobotConfig/helm_infantry.yaml
+    - name: build helm_infantry
+      run: cmake --build build
+
+    - name: generate omni_infantry code
+      run: xrobot_gen_main --config User/RobotConfig/omni_infantry.yaml
+    - name: build omni_infantry
+      run: cmake --build build
+
+    - name: generate radar code
+      run: xrobot_gen_main --config User/RobotConfig/radar.yaml
+    - name: build radar
+      run: cmake --build build
+
+    - name: generate wheel_leg code
+      run: xrobot_gen_main --config User/wheel_leg.yaml
+    - name: build wheel_leg
       run: cmake --build build
