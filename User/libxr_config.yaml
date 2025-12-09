@@ -1,4 +1,4 @@
-terminal_source: usb_otg_hs_cdc
+terminal_source: usb_otg_fs_cdc
 software_timer:
   priority: 2
   stack_depth: 2048
