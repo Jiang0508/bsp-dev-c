@@ -46,4 +46,4 @@ jobs:
       run: xrobot_gen_main --config User/RobotConfig/radar.yaml && cmake --build build
 
     - name: build wheel_leg
-      run: xrobot_gen_main --config User/RobotConfig/wheel_leg.yaml && cat User/xrobot_main.hpp && cmake --build build
+      run: xrobot_gen_main --config User/RobotConfig/wheel_leg.yaml && cmake --build build
