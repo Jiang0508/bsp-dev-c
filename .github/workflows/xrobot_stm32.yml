@@ -30,32 +30,20 @@ jobs:
     - name: build
       run: cmake --build build
 
-    - name: generate aerial code
-      run: xrobot_gen_main --config User/RobotConfig/aerial.yaml
     - name: build aerial
-      run: cmake --build build
+      run: xrobot_gen_main --config User/RobotConfig/aerial.yaml && cmake --build build
 
-    - name: generate dart code
-      run: xrobot_gen_main --config User/RobotConfig/dart.yaml
     - name: build dart
-      run: cmake --build build
+      run: xrobot_gen_main --config User/RobotConfig/dart.yaml && cmake --build build
 
-    - name: generate helm_infantry code
-      run: xrobot_gen_main --config User/RobotConfig/helm_infantry.yaml
     - name: build helm_infantry
-      run: cmake --build build
+      run: xrobot_gen_main --config User/RobotConfig/helm_infantry.yaml && cmake --build build
 
-    - name: generate omni_infantry code
-      run: xrobot_gen_main --config User/RobotConfig/omni_infantry.yaml
     - name: build omni_infantry
-      run: cmake --build build
+      run: xrobot_gen_main --config User/RobotConfig/omni_infantry.yaml && cmake --build build
 
-    - name: generate radar code
-      run: xrobot_gen_main --config User/RobotConfig/radar.yaml
     - name: build radar
-      run: cmake --build build
+      run: xrobot_gen_main --config User/RobotConfig/radar.yaml && cmake --build build
 
-    - name: generate wheel_leg code
-      run: xrobot_gen_main --config User/wheel_leg.yaml && cat User/xrobot_main.hpp
     - name: build wheel_leg
-      run: cmake --build build
+      run: xrobot_gen_main --config User/RobotConfig/wheel_leg.yaml && cat User/xrobot_main.hpp && cmake --build build
