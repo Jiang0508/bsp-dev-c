@@ -19,3 +19,5 @@ modules:
   - qdu-future/AtomImuCan
   - qdu-future/LegVmc
   - qdu-future/Matrix
+  - qdu-future/PowerControl
+  - qdu-future/SuperPower
